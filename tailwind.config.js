@@ -14,14 +14,17 @@ export default {
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
       },
-      backgroundImage: (theme) => ({
-        "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
-      }),
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
+        "mobile-home": "url('./assets/HomePageGraphic.png')",
+      },
+      boxShadow: {
+        soft: "0 4px 20px rgba(94, 0, 0, 0.08)",
+        card: "0 8px 32px rgba(94, 0, 0, 0.1)",
       },
       content: {
         evolvetext: "url('./assets/EvolveText.png')",

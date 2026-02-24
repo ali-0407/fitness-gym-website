@@ -9,8 +9,6 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
-
   const {
     register,
     trigger,
@@ -33,7 +31,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
       >
         {/* Header */}
         <motion.div
-          className="md: w-3/5"
+          className="md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -74,7 +72,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             >
               {/* name */}
               <input
-                className={inputStyles}
+                className="input-base"
                 type="text"
                 placeholder="Name"
                 //basically react hook form registering your input by passing in the name of the input
@@ -93,10 +91,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               )}
 
               {/* email */}
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="EMAIL"
+            <input
+              className="input-base"
+              type="text"
+              placeholder="EMAIL"
                 {...register("email", {
                   required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -113,9 +111,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               {/* message */}
 
-              <textarea
-                className={inputStyles}
-                placeholder="MESSAGE"
+            <textarea
+              className="input-base"
+              placeholder="MESSAGE"
                 rows={4}
                 cols={50}
                 {...register("message", {
@@ -136,7 +134,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+                className="btn-primary mt-5 px-20"
               >
                 SUBMIT
               </button>
